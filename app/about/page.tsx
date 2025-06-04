@@ -95,14 +95,15 @@ export default function AboutPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className="container py-10 max-w-6xl">
-        <h1 className="text-3xl font-bold mb-6 hero-text font-display">About Me</h1>
+      <div className="container py-12">
+        <h1 className="text-3xl font-bold mb-8 text-white">About Me</h1>
 
         {/* Profile Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          <div className="lg:col-span-1 flex justify-center lg:justify-start">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+          <div className="lg:col-span-1 flex justify-start">
             <div className="relative group">
-              <div className="relative w-56 h-56 overflow-hidden rounded-xl border-2 border-primary-blue/30 shadow-xl group-hover:shadow-2xl group-hover:shadow-primary-blue/20 transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary-blue/20 via-secondary-teal/15 to-accent-slate/20 rounded-lg blur-md opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="relative w-56 h-56 overflow-hidden rounded-lg border border-primary-blue/20 shadow-lg transform transition-all duration-500 group-hover:scale-105 group-hover:rotate-1">
                 <Image
                   src="/images/deepayan-photo.jpg"
                   alt="Deepayan Das - Development Engineer"
@@ -110,16 +111,16 @@ export default function AboutPage() {
                   className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-blue/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl"></div>
+                <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-lg"></div>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <h2 className="text-2xl font-bold mb-2 hero-text font-display">Deepayan Das</h2>
-            <h3 className="text-lg text-primary-blue mb-4 font-medium">Storage & Virtualization Engineer</h3>
+            <h2 className="text-3xl font-bold mb-4 text-white">Deepayan Das</h2>
+            <h3 className="text-xl text-primary-blue mb-6 font-semibold">Storage & Virtualization Engineer</h3>
 
-            <div className="prose prose-invert max-w-none text-base leading-relaxed space-y-4">
+            <div className="prose prose-invert max-w-none text-base leading-relaxed space-y-4 text-gray-300">
               <p>
                 I'm a motivated B.Tech Information Technology student at Asansol Engineering College with a strong
                 foundation in programming and software development. Currently working as a Development Engineer Intern
@@ -139,22 +140,22 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              <Badge className="bg-primary-blue/10 text-primary-blue border-primary-blue/20 px-3 py-1 text-xs font-medium">
+              <Badge className="bg-primary-blue/20 text-primary-blue border-primary-blue/30 px-3 py-1 text-sm">
                 Storage Systems
               </Badge>
-              <Badge className="bg-secondary-teal/10 text-secondary-teal border-secondary-teal/20 px-3 py-1 text-xs font-medium">
+              <Badge className="bg-secondary-teal/20 text-secondary-teal border-secondary-teal/30 px-3 py-1 text-sm">
                 Virtualization
               </Badge>
-              <Badge className="bg-accent-slate/10 text-accent-slate border-accent-slate/20 px-3 py-1 text-xs font-medium">
+              <Badge className="bg-accent-slate/20 text-accent-slate border-accent-slate/30 px-3 py-1 text-sm">
                 Java
               </Badge>
-              <Badge className="bg-primary-blue/10 text-primary-blue border-primary-blue/20 px-3 py-1 text-xs font-medium">
+              <Badge className="bg-primary-blue/20 text-primary-blue border-primary-blue/30 px-3 py-1 text-sm">
                 SQL
               </Badge>
-              <Badge className="bg-secondary-teal/10 text-secondary-teal border-secondary-teal/20 px-3 py-1 text-xs font-medium">
+              <Badge className="bg-secondary-teal/20 text-secondary-teal border-secondary-teal/30 px-3 py-1 text-sm">
                 Machine Learning
               </Badge>
-              <Badge className="bg-accent-slate/10 text-accent-slate border-accent-slate/20 px-3 py-1 text-xs font-medium">
+              <Badge className="bg-accent-slate/20 text-accent-slate border-accent-slate/30 px-3 py-1 text-sm">
                 Cloud Storage
               </Badge>
             </div>
@@ -163,22 +164,20 @@ export default function AboutPage() {
 
         {/* Experience Section */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center font-display">
-            <Briefcase className="mr-3 h-5 w-5 text-primary-blue" />
+          <h2 className="text-2xl font-bold mb-8 flex items-center text-white">
+            <Briefcase className="mr-3 h-6 w-6 text-primary-blue" />
             Professional Experience
           </h2>
-          <div className="space-y-5">
+          <div className="space-y-6">
             {experiences.map((exp, index) => (
-              <Card key={index} className="glass-card border-l-2 border-l-primary-blue">
-                <CardContent className="p-5">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+              <Card key={index} className="bg-gray-900/50 border-primary-blue/20 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                     <h3 className="text-lg font-bold text-primary-blue">{exp.title}</h3>
-                    <span className="text-xs text-muted-foreground bg-muted/20 px-2 py-0.5 rounded-full">
-                      {exp.period}
-                    </span>
+                    <span className="text-sm text-gray-400 bg-gray-800/50 px-2 py-1 rounded">{exp.period}</span>
                   </div>
-                  <p className="text-base text-secondary-teal mb-2 font-medium">{exp.company}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
+                  <p className="text-base text-secondary-teal mb-3 font-semibold">{exp.company}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">{exp.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -187,22 +186,20 @@ export default function AboutPage() {
 
         {/* Education Section */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-6 flex items-center font-display">
-            <GraduationCap className="mr-3 h-5 w-5 text-secondary-teal" />
+          <h2 className="text-2xl font-bold mb-8 flex items-center text-white">
+            <GraduationCap className="mr-3 h-6 w-6 text-secondary-teal" />
             Education
           </h2>
-          <div className="space-y-5">
+          <div className="space-y-6">
             {education.map((edu, index) => (
-              <Card key={index} className="glass-card border-l-2 border-l-secondary-teal">
-                <CardContent className="p-5">
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+              <Card key={index} className="bg-gray-900/50 border-secondary-teal/20 backdrop-blur-sm">
+                <CardContent className="p-6">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
                     <h3 className="text-lg font-bold text-secondary-teal">{edu.degree}</h3>
-                    <span className="text-xs text-muted-foreground bg-muted/20 px-2 py-0.5 rounded-full">
-                      {edu.year}
-                    </span>
+                    <span className="text-sm text-gray-400 bg-gray-800/50 px-2 py-1 rounded">{edu.year}</span>
                   </div>
-                  <p className="text-base text-primary-blue mb-2 font-medium">{edu.institution}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{edu.description}</p>
+                  <p className="text-base text-primary-blue mb-3 font-semibold">{edu.institution}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">{edu.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -211,16 +208,19 @@ export default function AboutPage() {
 
         {/* Certifications Section */}
         <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center font-display">
-            <Award className="mr-3 h-5 w-5 text-accent-slate" />
+          <h2 className="text-2xl font-bold mb-8 flex items-center text-white">
+            <Award className="mr-3 h-6 w-6 text-accent-slate" />
             Certifications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {certifications.map((cert, index) => (
-              <Card key={index} className="glass-card group hover:border-accent-slate/30">
+              <Card
+                key={index}
+                className="bg-gray-900/50 border-accent-slate/20 backdrop-blur-sm group hover:border-accent-slate/40 transition-colors"
+              >
                 <CardContent className="p-4 flex items-center">
                   <div className="w-2 h-2 rounded-full bg-accent-slate mr-3 group-hover:animate-pulse"></div>
-                  <span className="font-medium text-sm">{cert}</span>
+                  <span className="text-gray-300 text-sm">{cert}</span>
                 </CardContent>
               </Card>
             ))}

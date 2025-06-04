@@ -96,17 +96,17 @@ export default function Home() {
         <HeroAnimation />
 
         {/* Featured Projects Section */}
-        <section className="py-12 px-4 md:px-6">
-          <div className="container max-w-6xl mx-auto">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-2xl font-bold">Featured Projects</h2>
-              <Button asChild variant="ghost" className="animated-underline text-sm">
+        <section className="py-16 px-4 md:px-8">
+          <div className="container">
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-bold">Featured Projects</h2>
+              <Button asChild variant="ghost" className="animated-underline">
                 <Link href="/projects">
-                  View All <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                  View All <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredProjects.map((project) => (
                 <ProjectCard key={project.title} {...project} />
               ))}
@@ -115,16 +115,16 @@ export default function Home() {
         </section>
 
         {/* Skills Section */}
-        <section className="py-12 px-4 md:px-6 bg-muted/10">
-          <div className="container max-w-6xl mx-auto">
-            <h2 className="text-2xl font-bold mb-6 text-center">Skills & Expertise</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <section className="py-16 px-4 md:px-8 bg-muted/30">
+          <div className="container">
+            <h2 className="text-3xl font-bold mb-8 text-center">Skills & Expertise</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {skills.map((skillGroup) => (
-                <div key={skillGroup.category} className="bg-card p-4 rounded-lg shadow-sm border border-border/30">
-                  <h3 className="text-base font-semibold mb-3 text-primary-blue">{skillGroup.category}</h3>
-                  <ul className="space-y-1.5">
+                <div key={skillGroup.category} className="bg-card p-6 rounded-lg shadow-md">
+                  <h3 className="text-xl font-semibold mb-4 text-primary-blue">{skillGroup.category}</h3>
+                  <ul className="space-y-2">
                     {skillGroup.items.map((skill) => (
-                      <li key={skill} className="flex items-center text-sm">
+                      <li key={skill} className="flex items-center">
                         <div className="w-1 h-1 rounded-full bg-secondary-teal mr-2"></div>
                         {skill}
                       </li>
@@ -137,14 +137,14 @@ export default function Home() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 px-4 md:px-6">
-          <div className="container max-w-3xl mx-auto">
-            <div className="bg-gradient-to-r from-primary-blue/5 to-secondary-teal/5 p-6 md:p-8 rounded-lg text-center border border-primary-blue/10">
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">Let's Work Together</h2>
-              <p className="text-base mb-6 text-muted-foreground max-w-xl mx-auto">
+        <section className="py-16 px-4 md:px-8">
+          <div className="container max-w-4xl">
+            <div className="bg-gradient-to-r from-primary-blue/20 to-secondary-teal/20 p-8 md:p-12 rounded-2xl text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
+              <p className="text-lg mb-8 text-muted-foreground">
                 I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
               </p>
-              <Button asChild className="bg-primary-blue hover:bg-primary-blue/90 text-white">
+              <Button asChild size="lg" className="bg-primary-blue hover:bg-primary-blue/90 text-background">
                 <Link href="/contact">Get in Touch</Link>
               </Button>
             </div>
