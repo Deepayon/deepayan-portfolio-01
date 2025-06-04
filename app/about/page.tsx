@@ -118,7 +118,7 @@ export default function AboutPage() {
 
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold mb-4 text-white">Deepayan Das</h2>
-            <h3 className="text-xl text-primary-blue mb-6 font-semibold">Storage & Virtualization Engineer</h3>
+            <h3 className="text-xl text-primary-blue mb-6 font-semibold">Storage & Virtualization Intern</h3>
 
             <div className="prose prose-invert max-w-none text-base leading-relaxed space-y-4 text-gray-300">
               <p>

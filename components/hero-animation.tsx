@@ -49,7 +49,7 @@ export function HeroAnimation() {
         <div className="mb-6">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-blue/5 text-primary-blue text-xs font-medium border border-primary-blue/10 backdrop-blur-sm">
             <Sparkles className="w-3 h-3" />
-            Development Engineer Intern • Storage & Virtualization
+            Portfolio • Deepayan Das
           </span>
         </div>
 
