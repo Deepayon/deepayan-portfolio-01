@@ -54,10 +54,10 @@ export function HeroAnimation() {
         </div>
 
         <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight text-white">
-          Building Tomorrow's
+          Designing My
           <br />
           <span className="relative text-primary-blue font-bold">
-            Storage Solutions
+            Developer Journey
             <div className="absolute -inset-1 bg-primary-blue/20 blur-md -z-10 rounded-lg"></div>
           </span>
         </h1>
