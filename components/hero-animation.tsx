@@ -53,14 +53,14 @@ export function HeroAnimation() {
           </span>
         </div>
 
-        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight text-white">
+        <h3 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight text-white">
           Designing My
           <br />
           <span className="relative text-primary-blue font-bold">
             Developer Journey
             <div className="absolute -inset-1 bg-primary-blue/20 blur-md -z-10 rounded-lg"></div>
           </span>
-        </h1>
+        </h3>
 
         <p className="text-base sm:text-lg md:text-xl mb-8 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
           Aspiring Development Engineer with a growing focus on{" "}
