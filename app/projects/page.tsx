@@ -25,8 +25,7 @@ const projects = [
       "Real-time collaborative drawing application with dynamic tools, color palettes, and seamless communication using Socket.IO.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&crop=center",
     tags: ["HTML5", "CSS3", "JavaScript", "Socket.IO"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/sayandeeppaul/HoverBoard",
     category: "featured",
   },
   {
@@ -35,8 +34,7 @@ const projects = [
       "Machine learning-based recommendation system using dimensionality reduction and similarity measures with Python libraries.",
     image: "https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?w=400&h=300&fit=crop&crop=center",
     tags: ["Python", "Machine Learning", "Pandas", "NumPy"],
-    demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Deepayon/movie_recomender_system",
     category: "featured",
   },
   {
